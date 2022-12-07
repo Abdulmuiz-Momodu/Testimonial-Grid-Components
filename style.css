@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    background-color: hsl(0, 0%, 81%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 13px;
+}
+
+section {
+    display: grid;
+    grid-auto-rows: 20rem;
+    grid-auto-columns: 16rem;
+    grid-template-areas: 
+    'one one two five'
+    'three four four five';
+    gap: 10px;
+    padding: 10px;
+}
+
+.box {
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    justify-content: space-between;
+}
+
+.head {
+    display: flex;
+    gap: 1.5rem;
+}
+
+img {
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 40px;
+}
+
+
+h1, h3 {
+    color: #fff;
+}
+
+p {
+    color: hsl(0, 0%, 81%);
+}
+
+
+
+.one {
+    background: url(images/bg-pattern-quotation.svg);
+    background-color: hsl(263, 55%, 52%);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100px;
+    background-origin: content-box;
+    /* grid-column: 1 / span 2;
+    grid-row: 1; */
+    grid-area: one;
+}
+
+.two {
+    background-color: hsl(217, 19%, 35%);
+    /* grid-column: 3;
+    grid-row: 1; */
+    grid-area: two;
+}
+
+.three {
+    background-color: #fff;
+    /* grid-column: 1;
+    grid-row: 2; */
+    grid-area: three;
+}
+
+.four {
+    background-color: hsl(219, 29%, 14%);
+    /* grid-column: 2 / span 2;
+    grid-row: 2; */
+    grid-area: four;
+}
+
+.five {
+    background-color: #fff;
+    /* grid-column: 4;
+    grid-row: 1 / span 2; */
+    grid-area: five;
+}
+
+.five h3, .five p, .five h1, .three p, .three h3, .three h1 {
+    color: hsl(217, 19%, 35%);
+}
+
+.four img {
+    border: 2px solid purple;
+}
+
+.box:hover {
+    background-color: rgb(0, 255, 255);
+}
+
+img:hover {
+    height: 5rem;
+    width: 5rem;
+}
+
+img:active {
+    height: 4rem;
+    width: 4rem;
+}
+
+.one:hover {
+    cursor: cell;
+}
+
+.two:hover {
+    cursor: grab;
+}
+
+.three:hover {
+    cursor: not-allowed;
+}
+
+.four:hover {
+    cursor: pointer;
+}
+
+.five:hover {
+    cursor: move;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    section {
+        grid-template-areas: 
+        'one one two '
+        'three four four'
+        'five five five';
+        height: 100%;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box {
+        gap: 1rem;
+    }
+}
+
+
+
+
